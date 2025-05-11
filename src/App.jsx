@@ -309,7 +309,7 @@ function FortunePage() {
 //Main app component
 function App() {
   return (
-    <BrowserRouter> {/* Sets up the router to handle different pages */}
+    <BrowserRouter basename="/tarot"> {/* Sets up the router to handle different pages */}
       <Routes>
         <Route path="/" element={<LandingPage />} /> {/* Landing page with random number input */}
         <Route path="/fortune" element={<FortunePage />} /> {/* Main tarot reading page */}
