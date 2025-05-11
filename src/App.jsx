@@ -140,7 +140,7 @@ function Card({ fortune, cardNumber, label }) { //Takes the fortune, cardNumber,
       {imagePath && ( //Checks if the image path exists so it can render the image
         <img
           src={imagePath}
-          alt={fortune?.name || 'Tarot card lost in the cosmos'} //Sets the alt text to tarot card if not found
+          alt={fortune?.name || 'Tarot card lost in the cosmos'} //Sets the alt text to tarot card if not found 
           className="card-image"  //Applies the card-image class for styling of the image
           //Handles any issues/errors with loading the images
           onError={(e) => {
