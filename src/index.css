@@ -1,0 +1,229 @@
+/* Global styling for the root element */
+:root { 
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5; /* Line height for better text readability */
+  font-weight: 400;
+  /* Support both light and dark modes */
+  color-scheme: light dark;
+  color: #FFFFFFDE;
+  background-color: #242424;
+}
+/* Styling for anchor tags */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit; /* Inherit text decoration (no underline) */
+}
+a:hover {
+  color: #535bf2;
+}
+/* Body styling */
+body {
+  margin: 0;
+  display: flex;
+  font-size: 24px;
+  place-items: center;
+  min-width: 320px;
+  min-height: 600px;
+}
+/* Heading 1 styling */
+h1 {
+  font-size: 52px;
+  line-height: 1.1;
+}
+/* Button styling */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 10px 19px;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: inherit; /* Inherit font family from parent */
+  background-color: #1a1a1a;
+  transition: border-color 0.25s, background-color 0.25s; /* Smooth transition for border and background color changes */
+}
+/* Button hover state */
+button:hover { 
+  border-color: #646cff;
+  background-color: #646cff;
+}
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #4C2C92;
+    background-color: #E2E8F0;
+  }
+  a:hover {
+    color: #6B46C1;
+  }
+  button {
+    color: #4C2C92;
+    background-color: #E2E8F0;
+    border: 4px solid #FBBF24;
+  }
+}
+/* Styling for individual tarot cards */
+.card {
+  border: 4px solid #FBBF24;
+  padding: 15px; 
+  color: #E2E8F0;
+  width: 300px; 
+  text-align: center; 
+  background-color: #6B46C1; 
+  border-radius: 8px; /* Rounded corners */
+}
+/* Container for the initial three tarot cards */
+.card-container {
+  display: flex; /* Use flexbox to arrange cards in a row */
+  flex-direction: row; /* Horizontal layout */
+  gap: 20px; 
+  justify-content: center; 
+  margin-top: 20px; 
+}
+/* Container for the clarifying/destiny card */
+.clarify-card-container {
+  display: flex; /* Use flexbox to center the clarifying/destiny card */
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Space above the clarifying/destiny card */
+}
+/* Styling for card labels (e.g., Card 1, Card 2, Card 3, Clarifying/Destiny Card) */
+.card-label {
+  color: #E2E8F0; 
+  font-size: 32px;
+  margin: 2px 0 10px 0; 
+  font-weight: 600;
+}
+/* Styling for tarot card images */
+.card-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+/* Controls container for select and button */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+/* Topic select dropdown */
+.topic-select {
+  padding: 8px 12px;
+  font-size: 24px;
+  background-color: #D6BCFA; /* Light purple background */
+  color: #2D3748; /* Dark gray text */
+  border: 2px solid #6B46C1; /* Primary purple border */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s; /* Smooth transitions for hover/focus */
+}
+/* Hover and focus states for dropdown */
+.topic-select:hover,
+.topic-select:focus {
+  border-color: #FBBF24; /* Gold border on hover/focus */
+  background-color: #E9D8FD; /* Slightly lighter purple */
+  outline: none;
+}
+/* Styling for the clarify button to ensure it fits the design */
+button.clarify-button {
+  background-color: #6B46C1; /* Match card background for consistency */
+  border: 2px solid #FBBF24; /* Gold border to match cards */
+  color: #E2E8F0; /* Light text color */
+  padding: 8px 16px; /* Slightly smaller padding for longer text */
+  font-size: 32px; /* Slightly smaller font for longer text */
+}
+/* Hover state for clarify button */
+button.clarify-button:hover {
+  background-color: #5A347F; /* Darker purple on hover */
+  border-color: #FBBF24;
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 200px; /* Reduce width for smaller screens */
+  }
+  .card-image {
+    max-height: 150px; /* Reduce image size for smaller screens */
+  }
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+  }
+  .clarify-card-container {
+    display: flex; /* Use flexbox to center the clarifying card */
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Ensure full width within overall-answer for consistent alignment */
+    margin: 10px 0; /* Add vertical margin for spacing */
+  }
+  button.clarify-button {
+    font-size: 16px; /* Smaller font for mobile */
+    padding: 6px 12px; /* Smaller padding for mobile */
+  }
+}
+/* Landing page styling */
+.landing-page {
+  text-align: center;
+  padding: 32px; 
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* Random number form styling */
+.random-number-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; 
+  margin-top: 24px; 
+}
+/* Random number input styling */
+.random-number-input {
+  padding: 8px; 
+  font-size: 16px; 
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+}
+/* Random number form button styling */
+.random-number-form button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #6b3fa0;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+/* Random number form button hover state */
+.random-number-form button:hover {
+  background-color: #5a347f;
+}
+/* Instruction label styling */
+.instruction-label {
+  font-size: 19.2px; 
+  margin-bottom: 16px; 
+}
+/* Question input styles */
+.question-input {
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 16px; /* Adds spacing below the input */
+}
+/* Styling for the overall answer container */
+.overall-answer {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Increased gap to ensure spacing between answer, clarifying card, and buttons */
+}
