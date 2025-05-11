@@ -125,7 +125,7 @@ function MyButton({ setFortunes, topic, seed, isClarify = false, existingIndices
 function Card({ fortune, cardNumber, label }) { //Takes the fortune, cardNumber, and label as props
   console.log(`Card ${cardNumber} fortune:`, fortune); //Logs fortune info and card number to the console
   //Sets the base path for the card image using the card's name, or null if no name exists
-  const imageBasePath = fortune?.name ? `/tarot/tarot_cards/${fortune.name}` : null;
+  const imageBasePath = fortune?.name ? `/tarot_cards/${fortune.name}` : null;
   const imagePath = imageBasePath ? `${imageBasePath}.png` : null; //Creates the full image path by adding .png to the base path, or null if no base path
   //Normalize card name
   const cardName = fortune?.name
@@ -147,7 +147,7 @@ function Card({ fortune, cardNumber, label }) { //Takes the fortune, cardNumber,
             if(e.target.src.endsWith('.png')) { //Checks if the images ends in .png
               e.target.src = `${imageBasePath}.jpg`;  //If .png fails tries .jpg
             } else{  //If that also fails then use a placeholder image
-              e.target.src = '/tarot/tarot_cards/placeholder.png'; //Placeholder image
+              e.target.src = '/tarot_cards/placeholder.png'; //Placeholder image
               e.target.alt = 'Image not found'; //Alt text image not found
               console.error(`Failed to load image for ${fortune?.name}: ${imagePath} or ${imageBasePath}.jpg`); //Logs any errors in the console
             }
